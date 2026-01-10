@@ -15,13 +15,12 @@ monitor:
   directories:
     - /path/to/your/projects    # TODO: Change to your project directory
 
-  # Exclusion patterns (e.g., this project itself)
+  # Exclusion patterns
   # Specify as relative path or partial match
-  exclude:
-    - proj_YPM/YPM         # Exclude YPM itself
-    # Add more as needed:
+  # Examples:
+  exclude: []
     # - "node_modules"
-    # - ".git"
+    # - ".archived"
     # - "tmp"
 
   # Project detection patterns
@@ -70,10 +69,29 @@ editor:
 
 # Other settings
 settings:
-  # Language setting for YPM output
+  # Language setting for YPM command output
+  # This controls the language of PROJECT_STATUS.md and other YPM-generated content
+  #
   # Supported: en (English), ja (Japanese)
   # Default: en
-  # When set to non-English, Claude will translate output dynamically
+  #
+  # IMPORTANT: This is independent from Claude Code's response language
+  # Three language settings work together:
+  #   1. Claude Code response language (.claude/settings.json "language")
+  #   2. YPM output language (this setting)
+  #   3. Documentation language (CLAUDE.md, README.md, etc.)
+  #
+  # Example: You can have English CLAUDE.md, Japanese Claude responses,
+  #          and Japanese YPM output by setting:
+  #          - .claude/settings.json: "language": "japanese"
+  #          - config.yml: language: ja
+  #
+  # When set to non-English, Claude translates YPM output dynamically during command execution
+  # Translation mechanism:
+  #   - Commands include language-aware prompt instructions
+  #   - Translation happens at generation time (not post-processing)
+  #   - Claude uses context from config.yml to determine output language
+  # Performance: Minimal latency impact as translation occurs during content generation
   language: en
 
   # Include non-Git directories

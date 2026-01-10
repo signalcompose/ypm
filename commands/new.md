@@ -28,4 +28,8 @@ Based on `project-bootstrap-prompt.md`, set up through 8 phases interactively:
 
 ## How to Run
 
-Refer to `project-bootstrap-prompt.md` content and proceed through each phase interactively.
+**IMPORTANT**: Before starting, use the Read tool to load the complete content of:
+
+`${CLAUDE_PLUGIN_ROOT}/project-bootstrap-prompt.md`
+
+This file contains the detailed instructions for all 8 setup phases. Once loaded, proceed through each phase interactively following the instructions in that file.

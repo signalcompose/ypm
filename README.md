@@ -197,8 +197,8 @@ For contributors or those who want to run YPM from source:
 
 ```bash
 # Clone the repository
-git clone https://github.com/signalcompose/YPM.git
-cd YPM
+git clone https://github.com/signalcompose/ypm.git
+cd ypm
 
 # Install dependencies
 pip3 install -r requirements.txt
@@ -215,8 +215,8 @@ Then open Claude Code in the YPM directory and use the commands directly.
 
 Contributions to YPM are welcome!
 
-- **Repository**: [signalcompose/YPM](https://github.com/signalcompose/YPM)
-- **Bug reports & feature requests**: [GitHub Issues](https://github.com/signalcompose/YPM/issues)
+- **Repository**: [signalcompose/ypm](https://github.com/signalcompose/ypm)
+- **Bug reports & feature requests**: [GitHub Issues](https://github.com/signalcompose/ypm/issues)
 - **Pull requests**: Please follow the Git Flow in `CLAUDE.md`
 
 ---

@@ -1,6 +1,6 @@
 # YPM ドキュメント索引
 
-**最終更新**: 2025-11-12
+**最終更新**: 2026-01-10
 
 このディレクトリには、YPM (Your Project Manager) の設計・使用方法に関するドキュメントが格納されています。
 
@@ -13,7 +13,8 @@
 | ドキュメント | 説明 | 対象読者 |
 |------------|------|---------|
 | [../README.md](../README.md) | YPMの概要と使い方 | 全員 |
-| [../CLAUDE.md](../CLAUDE.md) | Claude Code向け指示書 | AI開発者 |
+| [../CLAUDE.md](../CLAUDE.md) | Claude Code向け指示書（英語） | AI開発者 |
+| [LANGUAGE_STRATEGY.md](LANGUAGE_STRATEGY.md) | YPMの言語戦略とバイリンガル設計方針（英語） | コントリビューター、国際ユーザー |
 | [../config.example.yml](../config.example.yml) | 設定ファイルサンプル（監視対象、検出パターン） | 設定変更者 |
 | [../project-bootstrap-prompt.md](../project-bootstrap-prompt.md) | 新規プロジェクト立ち上げガイド | 全員 |
 
