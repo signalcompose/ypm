@@ -69,9 +69,10 @@ yarn.lock
 /tmp/
 
 # Personal files (not for public repository)
+# Note: CLAUDE.md at project root IS tracked (official project documentation)
+#       User projects may have their own CLAUDE.md which should be ignored
 config.yml
 PROJECT_STATUS.md
-CLAUDE.md
 HANDOFF.md
 docs/sessions/
 .export-config.yml
