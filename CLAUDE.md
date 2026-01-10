@@ -149,7 +149,8 @@ docs/
 │   ├── ypm-open-spec.md
 │   └── global-export-system.md
 └── research/             # Research notes (Japanese)
-    └── *.md
+    ├── claude-md-loading-guarantee.md
+    └── private-to-public-strategy.md
 ```
 
 ## YPM Command Development Guidelines
@@ -185,8 +186,8 @@ Your command implementation here...
 ### File Naming Convention
 
 - Commands: `command-name.md` (lowercase with hyphens)
-- Skills: `skill-name.md` (lowercase with hyphens)
-- Agents: `agent-name.md` (lowercase with hyphens)
+
+Note: Future skills/agents will follow the same naming convention.
 
 ## YPM Configuration System
 
@@ -287,10 +288,9 @@ For detailed information:
 - Command Specs: `docs/development/*.md` (Japanese)
 - Research Notes: `docs/research/*.md` (Japanese)
 
-## Questions or Issues?
+## Additional Resources
 
-- GitHub Issues: https://github.com/signalcompose/ypm/issues
-- Discussions: https://github.com/signalcompose/ypm/discussions
+See README.md for contribution guidelines and support channels.
 
 ---
 

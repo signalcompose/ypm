@@ -491,6 +491,14 @@ For YPM itself:
 - **Public docs**: English (README.md, guide-en.md, commands)
 - **Internal dev docs**: Japanese (docs/development/, docs/research/)
 
+> **⚠️ IMPORTANT: These three settings are COMPLETELY INDEPENDENT**
+>
+> - Changing `.claude/settings.json` does **NOT** affect `~/.ypm/config.yml`
+> - Changing `~/.ypm/config.yml` does **NOT** affect Claude's response language
+> - You must configure **EACH setting separately** to achieve your desired setup
+>
+> They work together but are controlled independently.
+
 #### Example Configuration
 
 You can have English CLAUDE.md with Japanese responses and Japanese YPM output:

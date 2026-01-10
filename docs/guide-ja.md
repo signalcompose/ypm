@@ -2,6 +2,10 @@
 
 > **⚠️ DEPRECATED - このドキュメントは非推奨です**
 >
+> **Deprecation Date**: 2026-01-10
+> **Removal Target**: 2026-07-01 (6 months)
+> **Migration Path**: See [guide-en.md](./guide-en.md) with language settings
+>
 > **Please refer to [guide-en.md](./guide-en.md) as the primary documentation.**
 >
 > YPM now implements a three-level language configuration system (Claude Code 2.1.0+):

@@ -151,7 +151,8 @@ ypm/
     │   ├── ypm-open-spec.md
     │   └── global-export-system.md
     └── research/         # Research notes
-        └── *.md
+        ├── claude-md-loading-guarantee.md
+        └── private-to-public-strategy.md
 ```
 
 ---

@@ -87,7 +87,12 @@ settings:
   #          - .claude/settings.json: "language": "japanese"
   #          - config.yml: language: ja
   #
-  # When set to non-English, Claude will translate YPM output dynamically
+  # When set to non-English, Claude translates YPM output dynamically during command execution
+  # Translation mechanism:
+  #   - Commands include language-aware prompt instructions
+  #   - Translation happens at generation time (not post-processing)
+  #   - Claude uses context from config.yml to determine output language
+  # Performance: Minimal latency impact as translation occurs during content generation
   language: en
 
   # Include non-Git directories
