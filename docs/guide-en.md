@@ -64,7 +64,7 @@ YPM is installed as a Claude Code plugin, making it accessible from **any direct
 
 ```bash
 # In Claude Code, run:
-/install signalcompose/YPM
+/plugin marketplace add signalcompose/ypm
 ```
 
 ### Step 2: Initial Setup
