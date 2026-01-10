@@ -342,7 +342,7 @@ fi
 
 ```bash
 # 正しい方法
-gh pr create -R signalcompose/YPM-yamato --base develop --head feature/xxx
+gh pr create -R signalcompose/ypm-yamato --base develop --head feature/xxx
 
 # 間違った方法（upstreamに誤爆する可能性）
 gh pr create --base develop --head feature/xxx
@@ -401,5 +401,5 @@ export:
 ## 関連ドキュメント
 
 - [Private-to-Public Strategy](../research/private-to-public-strategy.md)
-- [Issue #4](https://github.com/signalcompose/YPM/issues/4) - Auto-merge機能追加
-- [Issue #45](https://github.com/signalcompose/YPM/pull/45) - グローバルエクスポートシステム実装
+- [Issue #4](https://github.com/signalcompose/ypm/issues/4) - Auto-merge機能追加
+- [Issue #45](https://github.com/signalcompose/ypm/pull/45) - グローバルエクスポートシステム実装
