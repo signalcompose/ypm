@@ -60,7 +60,7 @@ YPM implements three independent language settings that work together:
 
 **Scope**: All Claude responses in the session
 
-**Feature**: Available since Claude Code 2.1.0 (January 7, 2026)
+**Feature**: Available since Claude Code 2.1.0+ (January 2026)
 
 ### 2. YPM Command Output Language
 
@@ -111,8 +111,7 @@ CLAUDE.md:              Written in English      → Instructions for Claude
 
 This combination is **recommended** by the Japanese Claude Code community:
 
-1. **Avoids crashes**: UTF-8/CJK characters cause Rust panics (known bug)
-   - GitHub issues: #15767, #15647, #14405
+1. **Avoids crashes**: UTF-8/CJK characters cause Rust panics (known bug in some Claude Code versions)
    - Error: `byte index X is not a char boundary`
 
 2. **Better performance**: Claude's English training is more comprehensive

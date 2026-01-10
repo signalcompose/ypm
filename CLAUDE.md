@@ -22,8 +22,8 @@ git branch --show-current
 
 **Critical Git Flow Rule**:
 - ✅ Work on `develop` or `feature/*` branches
-- ❌ **NEVER commit directly to `main` branch** (protected)
-- ❌ **NEVER commit directly to `develop` branch** (protected)
+- ❌ **NEVER commit directly to `main` branch** (project policy)
+- ❌ **NEVER commit directly to `develop` branch** (project policy)
 - ✅ Always create feature branch from `develop`
 - ✅ Merge via Pull Request only
 

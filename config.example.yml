@@ -18,7 +18,7 @@ monitor:
   # Exclusion patterns (e.g., this project itself)
   # Specify as relative path or partial match
   exclude:
-    - proj_YPM/YPM         # Exclude YPM itself
+    - proj_ypm/ypm         # Exclude YPM itself
     # Add more as needed:
     # - "node_modules"
     # - ".git"
