@@ -25,6 +25,8 @@ YPM is installed as a Claude Code plugin, making it accessible from **any direct
 
 ### Step 1: Install the Plugin
 
+> ⚠️ **Important**: Use lowercase `signalcompose/ypm` - the capital letter version (`signalcompose/YPM`) will cause an error on macOS.
+
 ```bash
 # In Claude Code, first add the marketplace:
 /plugin marketplace add signalcompose/ypm
