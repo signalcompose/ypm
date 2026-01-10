@@ -725,6 +725,7 @@ Phase 8（CLAUDE.md作成と最終確認）に進んでよろしいですか？�
 
 1. **CLAUDE.md作成**
    - プロジェクト専用のCLAUDE.mdを作成
+   - **推奨**: CLAUDE.mdは英語で書く（Claude Code 2.1.0以降の言語設定機能を活用）
    - 以下の内容を含める：
      - プロジェクト概要
      - 技術スタック
@@ -732,6 +733,7 @@ Phase 8（CLAUDE.md作成と最終確認）に進んでよろしいですか？�
      - セッション開始時の手順
      - **Git Workflow（詳細な手順書）**
      - **コミット・PR・ISSUE規約（言語ルール強調）**
+     - **言語設定の説明（Claude Code 2.1.0+対応）**
      - ディレクトリ構成
      - 実装の進め方
      - トラブルシューティング
@@ -837,6 +839,45 @@ Phase 8（CLAUDE.md作成と最終確認）に進んでよろしいですか？�
    4. **コミット・PRの本文が英語になっている**
       → **絶対に許されない違反**
       → 即座にユーザーに報告し、修正方法を提案
+   ```
+
+   ### C. 言語設定の推奨（Claude Code 2.1.0以降）
+
+   ```markdown
+   ## 言語設定
+
+   ### CLAUDE.md言語の推奨
+
+   **推奨**: このCLAUDE.mdは英語で書かれています。
+
+   **理由**:
+   - UTF-8/CJK文字によるクラッシュ回避（既知のRust panic bug）
+   - Claudeの英語学習データを最大限活用
+   - 日本語コミュニティの推奨パターン
+   - 日本語応答は`language`設定で保証
+
+   ### 日本語で作業する方法
+
+   Claude Code 2.1.0以降では、英語CLAUDE.mdでも日本語応答が可能です：
+
+   **設定方法**:
+   `.claude/settings.json`（ユーザー設定、リポジトリ外）に以下を追加：
+
+   ```json
+   {
+     "language": "japanese"
+   }
+   ```
+
+   この設定により：
+   - ✅ CLAUDE.mdは英語（安定性・性能向上）
+   - ✅ Claude応答は日本語（自然なコミュニケーション）
+   - ✅ クラッシュリスク最小化
+
+   ### 参考資料
+
+   - [Claude Code Settings](https://docs.anthropic.com/en/docs/claude-code/settings)
+   - [YPM Language Strategy](https://github.com/signalcompose/ypm/blob/main/docs/LANGUAGE_STRATEGY.md)
    ```
 
 2. **CLAUDE.mdのレビュー**

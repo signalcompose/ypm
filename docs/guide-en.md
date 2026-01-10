@@ -453,15 +453,67 @@ Edit `~/.ypm/config.yml` to customize YPM behavior.
 
 ### Language Settings
 
-YPM supports multiple languages. Set your preferred language in `~/.ypm/config.yml`:
+YPM implements a **three-level language configuration** system. These settings are independent and work together:
+
+#### 1. Claude Code Response Language
+
+Controls what language Claude uses when responding to you.
+
+**Location**: `.claude/settings.json` (user setting, not in repository)
+
+```json
+{
+  "language": "japanese"
+}
+```
+
+This setting ensures Claude responds in your preferred language, even when reading English documentation.
+
+#### 2. YPM Command Output Language
+
+Controls the language of YPM-generated content (PROJECT_STATUS.md, etc.).
+
+**Location**: `~/.ypm/config.yml`
 
 ```yaml
 settings:
   language: en   # Options: en (English), ja (Japanese)
 ```
 
-- **English (`en`)**: Default language, output displayed as-is
-- **Japanese (`ja`)**: Claude will dynamically translate all output to Japanese
+- **English (`en`)**: Default, output displayed as-is
+- **Japanese (`ja`)**: Claude dynamically translates YPM output to Japanese
+
+#### 3. Documentation Language
+
+The language of project instructions and documentation (CLAUDE.md, README.md, etc.).
+
+For YPM itself:
+- **Public docs**: English (README.md, guide-en.md, commands)
+- **Internal dev docs**: Japanese (docs/development/, docs/research/)
+
+> **⚠️ IMPORTANT: These three settings are COMPLETELY INDEPENDENT**
+>
+> - Changing `.claude/settings.json` does **NOT** affect `~/.ypm/config.yml`
+> - Changing `~/.ypm/config.yml` does **NOT** affect Claude's response language
+> - You must configure **EACH setting separately** to achieve your desired setup
+>
+> They work together but are controlled independently.
+
+#### Example Configuration
+
+You can have English CLAUDE.md with Japanese responses and Japanese YPM output:
+
+```
+.claude/settings.json:  "language": "japanese"  → Claude responds in Japanese
+~/.ypm/config.yml:      language: ja            → YPM output in Japanese
+CLAUDE.md:              Written in English      → Instructions for Claude
+```
+
+**Why English CLAUDE.md?**
+- Avoids UTF-8/CJK character crashes (known Rust bug)
+- Leverages Claude's better English training
+- Recommended by Japanese Claude Code community
+- Japanese responses are guaranteed by `language` setting
 
 The language setting is applied during `/ypm:setup` when you select your preferred language, or you can change it manually in the config file.
 

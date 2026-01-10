@@ -1,10 +1,30 @@
 # YPM 詳細ガイド（日本語）
 
-> **Note**: This document is deprecated. Please refer to [guide-en.md](./guide-en.md) as the primary documentation.
-> YPM now supports language settings in `~/.ypm/config.yml`. Set `settings.language: ja` for Japanese output - Claude will translate dynamically.
+> **⚠️ DEPRECATED - このドキュメントは非推奨です**
+>
+> **Deprecation Date**: 2026-01-10
+> **Removal Target**: 2026-07-01 (6 months)
+> **Migration Path**: See [guide-en.md](./guide-en.md) with language settings
+>
+> **Please refer to [guide-en.md](./guide-en.md) as the primary documentation.**
+>
+> YPM now implements a three-level language configuration system (Claude Code 2.1.0+):
+> 1. **Claude response language**: `.claude/settings.json` → `"language": "japanese"`
+> 2. **YPM output language**: `~/.ypm/config.yml` → `language: ja`
+> 3. **Documentation language**: English (CLAUDE.md, guide-en.md) for stability
+>
+> With these settings, you get Japanese responses and Japanese YPM output while reading English docs.
+> See [guide-en.md Language Settings](./guide-en.md#language-settings) for details.
 
-> **注意**: このドキュメントは非推奨です。最新のドキュメントは [guide-en.md](./guide-en.md) を参照してください。
-> YPMは `~/.ypm/config.yml` で言語設定をサポートしています。`settings.language: ja` を設定すると、Claude が日本語に翻訳して出力します。
+> **⚠️ 非推奨 - 最新ドキュメントは guide-en.md を参照してください**
+>
+> YPMは3段階の言語設定システムを採用しています（Claude Code 2.1.0以降）：
+> 1. **Claude応答言語**: `.claude/settings.json` に `"language": "japanese"` を設定
+> 2. **YPM出力言語**: `~/.ypm/config.yml` に `language: ja` を設定
+> 3. **ドキュメント言語**: 英語（CLAUDE.md、guide-en.md）を推奨（安定性のため）
+>
+> これらの設定により、英語ドキュメントを読みながら日本語で応答・出力を得られます。
+> 詳細は [guide-en.md 言語設定セクション](./guide-en.md#language-settings) を参照してください。
 
 ---
 

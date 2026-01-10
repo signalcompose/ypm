@@ -111,12 +111,13 @@ monitor:
     # - "*/*"       # One level deep
     # - "proj_*/*"  # Prefixed directories
 
-  # Directories/patterns to exclude from scanning
-  exclude:
-    - node_modules
-    - vendor
-    - .git
-    - __pycache__
+  # Exclusion patterns
+  # Specify as relative path or partial match
+  # Examples:
+  exclude: []
+    # - "node_modules"
+    # - ".archived"
+    # - "tmp"
 
   # Projects to hide from /ypm:open (but still scanned)
   ignore_in_open: []
@@ -133,49 +134,7 @@ classification:
 
 ---
 
-### STEP 5: Optional - Link Commands for Prefix-Free Access
-
-Use **AskUserQuestion**:
-
-**Question**:
-```
-Would you like to access YPM commands without the 'ypm:' prefix?
-
-This will create symbolic links in ~/.claude/commands/
-so you can use /update instead of /ypm:update
-```
-
-**Options**:
-1. **Yes** - Create links (commands available as /start, /update, etc.)
-2. **No** - Keep prefix (commands available as /ypm:start, /ypm:update, etc.)
-
-**If Yes**:
-
-```bash
-# Get plugin directory (where commands are installed)
-PLUGIN_DIR="$(dirname "$(dirname "$0")")"  # This needs to be determined
-
-# Create symlinks
-mkdir -p ~/.claude/commands
-for cmd in ~/.claude/plugins/ypm/commands/*.md; do
-  ln -sf "$cmd" ~/.claude/commands/
-done
-```
-
-**Note**: The actual plugin path may vary. If automatic linking fails, provide manual instructions:
-
-```
-To enable prefix-free commands, run:
-
-  YPM_PLUGIN_DIR=$(find ~/.claude -name "ypm" -type d 2>/dev/null | head -1)
-  for cmd in "$YPM_PLUGIN_DIR/commands"/*.md; do
-    ln -sf "$cmd" ~/.claude/commands/
-  done
-```
-
----
-
-### STEP 6: Verify Installation
+### STEP 5: Verify Installation
 
 ```bash
 cat ~/.ypm/config.yml
@@ -191,7 +150,7 @@ Data file: ~/.ypm/PROJECT_STATUS.md (will be created on first update)
 
 Next steps:
 1. Review your configuration: cat ~/.ypm/config.yml
-2. Run your first scan: /ypm:update (or /update if linked)
+2. Run your first scan: /ypm:update
 
 Your projects will be scanned from:
   - /path/to/your/projects
@@ -209,7 +168,6 @@ To reconfigure YPM, run this command again. It will detect the existing configur
 To remove YPM data:
 ```bash
 rm -rf ~/.ypm
-rm ~/.claude/commands/ypm*.md  # If links were created
 ```
 
 ---
