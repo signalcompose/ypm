@@ -15,13 +15,12 @@ monitor:
   directories:
     - /path/to/your/projects    # TODO: Change to your project directory
 
-  # Exclusion patterns (e.g., this project itself)
+  # Exclusion patterns
   # Specify as relative path or partial match
-  exclude:
-    - proj_ypm/ypm         # Exclude YPM itself
-    # Add more as needed:
+  # Examples:
+  exclude: []
     # - "node_modules"
-    # - ".git"
+    # - ".archived"
     # - "tmp"
 
   # Project detection patterns
