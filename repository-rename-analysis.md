@@ -12,7 +12,7 @@
 This document provides a comprehensive analysis of renaming the YPM GitHub repository from `signalcompose/YPM` to `signalcompose/your-project-manager` to resolve a critical macOS installation issue with Claude Code.
 
 **Key Findings**:
-- ✅ **19 file locations** require URL updates across 10 files
+- ✅ **16 URL references** require updates across 9 files
 - ✅ `.claude-plugin/plugin.json` is **critical** - directly affects marketplace registration
 - ✅ GitHub automatic redirect provides **1-year grace period** for migration
 - ⚠️ **Case sensitivity issue** currently blocks macOS users from installing the plugin
@@ -149,9 +149,9 @@ User must manually change to lowercase: /plugin marketplace add signalcompose/yp
 
 ### Files Requiring Updates
 
-**Total**: 19 URL references across 10 files
+**Total**: 16 URL references across 9 files
 
-#### Critical - Must Update (10 files, 19 references)
+#### Critical - Must Update (9 files, 16 references)
 
 ##### 1. `README.md` (3 references)
 **File**: `/Users/yamato/Src/proj_ypm/YPM/README.md`
