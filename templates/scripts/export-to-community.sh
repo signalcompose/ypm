@@ -454,7 +454,7 @@ print_success "Feature branch pushed: $FEATURE_BRANCH"
 
 print_info "📝 Creating pull request..."
 
-# Extract repository name from URL (e.g., signalcompose/YPM)
+# Extract repository name from URL (e.g., signalcompose/ypm)
 REPO_NAME=$(echo "$PUBLIC_REPO_URL" | sed -E 's/.*github\.com[:/](.*)\.git/\1/')
 
 # Get the last commit SHA from public repo
