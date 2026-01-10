@@ -220,7 +220,7 @@ return message
 set -e
 
 PRIVATE_REPO="/Users/yamato/Src/proj_YPM/YPM-yamato"
-PUBLIC_REPO_URL="https://github.com/signalcompose/YPM.git"
+PUBLIC_REPO_URL="https://github.com/signalcompose/ypm.git"
 EXPORT_DIR="/tmp/ypm-public-export-$(date +%s)"
 
 echo "🔍 Exporting YPM to public repository..."
@@ -253,7 +253,7 @@ git remote add public "$PUBLIC_REPO_URL"
 git push public develop:main --force
 
 echo "✅ Export completed!"
-echo "⚠️  Verify: https://github.com/signalcompose/YPM"
+echo "⚠️  Verify: https://github.com/signalcompose/ypm"
 ```
 
 ### 実行手順
@@ -293,7 +293,7 @@ git show  # 最新コミット詳細確認
 cd ~/Src/proj_YPM/YPM-yamato
 
 # Public repoをremoteに追加（初回のみ）
-git remote add public https://github.com/signalcompose/YPM.git
+git remote add public https://github.com/signalcompose/ypm.git
 
 # Public repoの最新情報を取得
 git fetch public
@@ -347,7 +347,7 @@ git push origin develop
 ```bash
 # GitHub UIでPR #XXXをマージ
 # または gh CLIで
-gh pr merge 10 --repo signalcompose/YPM --merge
+gh pr merge 10 --repo signalcompose/ypm --merge
 ```
 
 ### フロー図
