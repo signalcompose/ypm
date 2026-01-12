@@ -63,8 +63,13 @@ YPM is installed as a Claude Code plugin, making it accessible from **any direct
 ### Step 1: Install the Plugin
 
 ```bash
-# In Claude Code, run:
-/plugin marketplace add signalcompose/ypm
+# In Claude Code, first add the marketplace:
+/plugin marketplace add signalcompose/claude-tools
+
+# Then install the plugin:
+/plugin install ypm@signalcompose/claude-tools
+
+# Or use the Discover tab in /plugin menu
 ```
 
 ### Step 2: Initial Setup
@@ -604,7 +609,7 @@ monitor:
 
 ### Q: Can I use this on another machine?
 
-**A**: Yes. Install YPM using `/plugin marketplace add signalcompose/ypm`, then run `/ypm:setup` to configure your environment. You can also copy your `~/.ypm/config.yml` to the new machine.
+**A**: Yes. First add the marketplace with `/plugin marketplace add signalcompose/claude-tools`, then install with `/plugin install ypm@signalcompose/claude-tools`, and run `/ypm:setup` to configure your environment. You can also copy your `~/.ypm/config.yml` to the new machine.
 
 ---
 
